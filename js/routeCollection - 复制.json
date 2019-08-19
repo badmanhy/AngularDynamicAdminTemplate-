@@ -1,0 +1,20 @@
+{
+  "home": {
+    "url": "/home",
+    "templateUrl": "views/home.html"
+  },
+
+  "account": {
+    "url": "/account",
+    "templateUrl": "views/common.html"
+  },
+
+  "account.accountList": {
+    "url": "/accountList",
+    "templateUrl": "views/acount/account.html"
+  },
+  "account.login": {
+    "url": "/login",
+    "templateUrl": "views/acount/account.html"
+  }
+}

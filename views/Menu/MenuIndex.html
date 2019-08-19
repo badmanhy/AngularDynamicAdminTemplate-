@@ -1,0 +1,15 @@
+﻿<div class="container" data-ng-controller="MenuCtrl as menuCtrl">
+
+
+    <div class="card">
+        <div class="card-header">
+            <h2>菜单 <small>列表编辑</small></h2>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <dy-table url="http://localhost:27832/GetAccountList" httpTypes="httpTypes" params="params" columns="columns" actions="actions" callback="reload"></dy-table>
+            </div>
+        </div>
+    </div>
+</div>

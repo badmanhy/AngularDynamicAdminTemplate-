@@ -1,0 +1,40 @@
+[
+  {
+    "actionUrl": "account.accountList",
+    "actionMenu": "/accountList",
+    "templateUrl": "views/acount/accountIndex.html",
+    "templateJs": [
+      "js/services/accountServices.js",
+      "js/controllers/accountControllers.js",
+      "js/angular-file-upload.js",
+      "js/controllers/UploadFile.js"]
+  },
+  {
+    "actionUrl": "account",
+    "actionMenu": "/account",
+    "templateUrl": "views/common.html",
+    "templateJs": [ ]
+  },
+
+  {
+    "actionUrl": "account.tables",
+    "actionMenu": "/tables",
+    "templateUrl": "views/tables.html",
+    "templateJs": [ ]
+  },
+  {
+    "actionUrl": "account.data-table",
+    "actionMenu": "/data-table",
+    "templateUrl": "views/data-table.html",
+    "templateJs": [ "js/controllers/table.js" ]
+  },
+  {
+    "actionUrl": "account.menuIndex",
+    "actionMenu": "/menuIndex",
+    "templateUrl": "views/Menu/MenuCreate.html",
+    "templateJs": [
+      "js/services/Menu/menuServices.js",
+      "js/controllers/Menu/menuControllers.js"
+    ]
+  }
+]

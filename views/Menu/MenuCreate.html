@@ -1,0 +1,152 @@
+﻿<div class="container" ng-controller="menuController">
+    <!--<div class="block-header">
+        <h2>MenuAdd</h2>
+
+        <ul class="actions">
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-trending-up"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-check-all"></i>
+                </a>
+            </li>
+            <li class="dropdown" uib-dropdown>
+                <a href="" uib-dropdown-toggle>
+                    <i class="zmdi zmdi-more-vert"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a href="">Refresh</a>
+                    </li>
+                    <li>
+                        <a href="">Manage Widgets</a>
+                    </li>
+                    <li>
+                        <a href="">Widgets Settings</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>-->
+
+
+    <div class="card">
+
+        <form class="form-horizontal" role="form">
+            <div class="card-header">
+                <h2>MenuAdd<small>添加在指定站点得Menu</small></h2>
+            </div>
+
+            <div class="card-body card-padding">
+
+                <div class="form-group">
+                    <label for="ParentMenuId"  class="col-sm-2 control-label">父级菜单</label>
+                    <div class="col-sm-10">
+                        <div class="fg-line">
+                            <input type="text" ng-model="menuView.ParentMenuId" class="form-control input-sm" id="ParentMenuId" placeholder="ParentMenuId">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="MenuName" class="col-sm-2 control-label">菜单名</label>
+                    <div class="col-sm-10">
+                        <div class="fg-line">
+                            <input type="text" ng-model="menuView.MenuName" class="form-control input-sm" id="MenuName" placeholder="MenuName">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="Language" class="col-sm-2 control-label">语言</label>
+                    <div class="col-sm-10">
+                        <div class="fg-line">
+                            <div class="select">
+                                <select class="form-control" ng-model="menuView.Language"> 
+                                    <option>Select an Language</option>
+                                    <option value="EN">英语(English)</option>
+                                    <option value="ZH_CN">简体中文(Chinese)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="SubjectionModuleId" class="col-sm-2 control-label">模块</label>
+                    <div class="col-sm-10">
+
+                        <div class="fg-line">
+                            <input type="text" ng-model="menuView.SubjectionModuleId" class="form-control input-sm" id="SubjectionModuleId" placeholder="SubjectionModuleId">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ActionUrl" class="col-sm-2 control-label">跳转地址</label>
+                    <div class="col-sm-10">
+
+                        <div class="fg-line">
+                            <input type="text" ng-model="menuView.ActionUrl" class="form-control input-sm" id="ActionUrl" placeholder="ActionUrl">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ActionMenu" class="col-sm-2 control-label">具体跳转指向</label>
+                    <div class="col-sm-10">
+
+                        <div class="fg-line">
+                            <input type="text" ng-model="menuView.ActionMenu" class="form-control input-sm" id="ActionMenu" placeholder="ActionMenu">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="TemplateUrl" class="col-sm-2 control-label">跳转页面路径</label>
+                    <div class="col-sm-10">
+
+                        <div class="fg-line">
+                            <input type="text" ng-model="menuView.TemplateUrl" class="form-control input-sm" id="TemplateUrl" placeholder="TemplateUrl">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="TemplateJs" class="col-sm-2 control-label">页面需加载JS</label>
+                    <div class="col-sm-10">
+
+                        <div class="fg-line">
+                            <input type="text" ng-model="menuView.TemplateJs" class="form-control input-sm" id="TemplateJs" placeholder="TemplateJs">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="HtmlClass" class="col-sm-2 control-label">样式</label>
+                    <div class="col-sm-10">
+
+                        <div class="fg-line">
+                            <input type="text" ng-model="menuView.HtmlClass" class="form-control input-sm" id="HtmlClass" placeholder="HtmlClass">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="HtmlIcons" class="col-sm-2 control-label">图标</label>
+                    <div class="col-sm-10">
+
+                        <div class="fg-line">
+                            <input type="text" ng-model="HtmlIcons" class="form-control input-sm" id="HtmlIcons" placeholder="HtmlIcons">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button  ng-click="actions.clicks('','create')" class="btn bgm-green waves-effect">sunbmit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

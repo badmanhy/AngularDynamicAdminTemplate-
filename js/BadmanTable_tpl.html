@@ -1,0 +1,45 @@
+﻿<style>
+    .dydatatable-btns .btn {
+        margin-right: 6px;
+    }
+
+    .dy-pagination .pagination {
+        margin: 0;
+    }
+</style>
+<table class="table table-striped table-vmiddle">
+    <thead>
+        <tr>
+            <th ng-repeat="th in trs" ng-bind="th.title" width="{{th.width}}"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--无数据-->
+        <tr ng-if="lists.length == 0">
+            <td colspan="{{trs.length}}" class="text-center">暂无数据</td>
+        </tr>
+        <!--有数据-->
+        <tr ng-repeat="list in lists">
+            <td ng-repeat="td in trs" ng-bind="list[td.attribute]" ng-if="td.type == 'data'"></td>
+            <td ng-repeat="td in trs" ng-if="td.type == 'action'">
+                <div class="dydatatable-btns">
+                    <button ng-repeat="btn in td.buttons" class="btn {{btn.className}}" type="button"
+                            ng-click="actions.clicks(list,btn)" ng-if="!btn.visible || $eval(btn.visible)">
+                        {{btn.title}}
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!--//angular-ui-bootstrap pagination-->
+<div class="row" ng-if="lists.length > 0">
+    <div class="col-md-5 col-sm-12">
+        <div class="dataTables_info" id="DataTables_Table_3_info" role="status" aria-live="polite">
+            显示第 {{(bigCurrentPage - 1) * len + 1}} 至 {{currentNum}} 项结果，共 {{bigTotalItems}} 项
+        </div>
+    </div>
+    <div class="col-md-7 col-sm-12 text-right dy-pagination">
+        <uib-pagination first-text="首页" last-text="末页" previous-text="上页" next-text="下页" total-items="$parent.bigTotalItems" ng-model="$parent.bigCurrentPage" max-size="$parent.maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></uib-pagination>
+    </div>
+</div>
